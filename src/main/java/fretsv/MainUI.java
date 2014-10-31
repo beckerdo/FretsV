@@ -39,15 +39,17 @@ public class MainUI extends UI {
 	    for (int i = 1; i < 8; i++) {
 	    	final VerticalLayout pageLayout = new VerticalLayout(
 	    		// new Label(getLoremContent(), ContentMode.HTML));
-    		    new Label( "<body><h2>Foo bar</h2><p>It's nothing but foorbar.</p></body>", ContentMode.HTML));
+    		    new Label( "<body><h2>Foo bar</h2><p>It's nothing but foobar.</p></body>", ContentMode.HTML));
 	    	pageLayout.setMargin(true);
 	    	sample.addTab(pageLayout, "Tab " + i);
 	     }
 	    
 	    TuningPanel tuningPanel = new TuningPanel();
+	    tuningPanel.setDescription( "Use this tab to set the fretboard tuning." );
 	    sample.addTab( tuningPanel, tuningPanel.toString());
-	    
+	    	    
 	    ScoringPanel scoringPanel = new ScoringPanel();
+	    scoringPanel.setDescription( "Use this tab to rank and order the chords." );
 	    sample.addTab( scoringPanel, scoringPanel.toString());
 	    
     	layout.addComponent( createMenuBar() );
